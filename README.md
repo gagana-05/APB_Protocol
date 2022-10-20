@@ -29,9 +29,9 @@ if the device at most times in active low power mode, so protocol sends a select
 *Data path - Prdata, Pwdata, pAddress*
 
 __Three states protocol can be__:</br>
-Idle State - Remain idle Psel, Penable = 0</br>
-Setup State - if you want to initiate any transaction - Psel = 1, Penable = 0</br>
-Access State - Psel = 1, Penable = 1 </br>
+ST_IDLE - Remain idle Psel, Penable = 0</br>
+ST_SETUP - if you want to initiate any transaction - Psel = 1, Penable = 0</br>
+ST_ACCESS - Psel = 1, Penable = 1 </br>
 Will remain in access state until we get Pready , so in Access state Pready = 0</br>
 meanwhile Pwrite, PwData, Paddr will remain stable - if we change these we will run into protocol violation
 </br>
